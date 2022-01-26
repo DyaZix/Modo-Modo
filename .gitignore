@@ -32,5 +32,5 @@
 *.app
 
 # Directories
-src/include
-src/lib
+src/include/
+src/lib/
