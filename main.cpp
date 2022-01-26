@@ -1,8 +1,16 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(700, 400), "SFML suce!");
+    
+    sf::RenderWindow window(sf::VideoMode(700, 400), "Modo modo");
+    auto image = sf::Image{};
+    if (!image.loadFromFile("src/assets/icons/ban.png"))
+    {
+        std::cout<<"erreur de l'affichage de l'icône";
+    }
+    window.setIcon(image.getSize().x, image.getSize().y, image.getPixelsPtr());
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 
