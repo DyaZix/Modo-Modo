@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Directories
+src/include
+src/lib
