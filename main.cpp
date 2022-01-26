@@ -4,7 +4,7 @@
 int main()
 {
     
-    sf::RenderWindow window(sf::VideoMode(700, 400), "Modo modo");
+    sf::RenderWindow window(sf::VideoMode(4000, 400), "Modo modo");
     auto image = sf::Image{};
     if (!image.loadFromFile("src/assets/icons/ban.png"))
     {

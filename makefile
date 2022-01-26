@@ -1,4 +1,4 @@
-all: compile link
+
 
 compile:
 	g++ -Isrc/include -c main.cpp
