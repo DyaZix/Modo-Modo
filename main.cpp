@@ -4,7 +4,7 @@
 int main()
 {
     
-    sf::RenderWindow window(sf::VideoMode(438, 400), "Modo modo");
+    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Waza est pas bo", sf::Style::Fullscreen);
     auto image = sf::Image{};
     if (!image.loadFromFile("src/assets/icons/ban.png"))
     {
