@@ -1,31 +1,10 @@
+#include "../game/game.cpp"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
 int main()
 {
-    
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Waza est pas bo", sf::Style::Fullscreen);
-    auto image = sf::Image{};
-    if (!image.loadFromFile("src/assets/icons/ban.png"))
-    {
-        std::cout<<"erreur de l'affichage de l'icône";
-    }
-    window.setIcon(image.getSize().x, image.getSize().y, image.getPixelsPtr());
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    Game::start();
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
     return 0;
 }
