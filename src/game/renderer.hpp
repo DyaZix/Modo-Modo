@@ -32,19 +32,19 @@ private:
 
 
     ////////////////////////////////////////////////////////////
-    /// \brief Displays the sprites
+    /// \brief Displays the objects (player, monsters, projectiles ..)
     ///
     /// Must be ran each frames
     /// Must be optimised to only display the textures seen by the camera
     ///
     ////////////////////////////////////////////////////////////
-    static void displaySprites();
+    static void displayObjects();
 
 public:
 
 
     ////////////////////////////////////////////////////////////
-    /// \brief Displays the map and the sprites on it
+    /// \brief Displays the map and the objects on it, the IU and the cursor
     ///
     /// Must be ran each frames
     ///

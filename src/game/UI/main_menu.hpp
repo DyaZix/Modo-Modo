@@ -4,19 +4,19 @@
 class Main_menu
 {
 private:
-    
+    static sf::Sprite* sprite;
+    static sf::Texture* texture;
 
-    
 
 public:
-    Main_menu(/* args */);
-    ~Main_menu();
+
+
+    ////////////////////////////////////////////////////////////
+    /// \brief get the pointer of the drawable sprite of the main_menu
+    ///
+    /// TODO: animate by using animation
+    ///
+    ////////////////////////////////////////////////////////////
+    static sf::Sprite* getSprite();
 };
 
-Main_menu::Main_menu(/* args */)
-{
-}
-
-Main_menu::~Main_menu()
-{
-}

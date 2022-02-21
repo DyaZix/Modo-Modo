@@ -18,20 +18,22 @@ void Renderer::loadTextures(){
 void Renderer::displayMap(){
 
     // TODO: DisplayMap
-    // Use map data in Map::data
+    // Use Sprites with Sprites::Tiles and Map::data
 }
 
 
 
-void Renderer::displaySprites(){
+void Renderer::displayObjects(){
 
     // TODO: DisplaySprites
-    // Use Sprites with Sprites::SpriteList
+    // Use Sprites with Sprites::Objects
 }
 
 
 void Renderer::display(){
 
     Renderer::displayMap();
-    Renderer::displaySprites();
+    Renderer::displayObjects();
+    // TODO: diplsayUI()
+    // TODO: displayCursor()
 }

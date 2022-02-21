@@ -1,4 +1,5 @@
 #include "game.hpp"
+#include "UI/main_menu.cpp"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
@@ -33,13 +34,21 @@ void Game::start()
     ////////////////////////////////////////////////////////////
     // WINDOW CREATION
     ////////////////////////////////////////////////////////////
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Waza est pas bo", sf::Style::Fullscreen);
-    auto image = sf::Image{};
+    sf::VideoMode desktopMode = sf::VideoMode::getDesktopMode();
+
+    sf::RenderWindow window(sf::VideoMode(  desktopMode.width,
+                                            desktopMode.height,
+                                            desktopMode.bitsPerPixel),
+                                            "Waza est pas bo",
+                                            sf::Style::Fullscreen);
+                            
+    window.setVerticalSyncEnabled (false);
 
 
     ////////////////////////////////////////////////////////////
     // Icon setup
     ////////////////////////////////////////////////////////////
+    auto image = sf::Image{};
     if (!image.loadFromFile("src/assets/icons/ban.png"))
     {
         std::cout<<"erreur de l'affichage de l'icône";
@@ -71,7 +80,7 @@ void Game::start()
 
         }
         window.clear();
-        window.draw(shape);
+        window.draw(*Main_menu::getSprite());
         window.display();
 
 
