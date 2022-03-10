@@ -1,4 +1,4 @@
-#include "../include/SFML/Graphics"
+#include <SFML/Graphics.hpp>
 
 class Textures_manager
 {

@@ -1,6 +1,6 @@
 #include "animation.hpp"
 
-Animation::(int sprite_height, int sprite_width, sf::Texture& texture)
+Animation::Animation(int sprite_height, int sprite_width, sf::Texture& texture)
 : sprite_height(sprite_height), sprite_width(sprite_width), texture_spritesheet(texture)
 {}
 
