@@ -1,5 +1,6 @@
 #include "game.hpp"
-#include "UI/main_menu.cpp"
+#include "UI/main_menu.hpp"
+#include "textures_manager.hpp"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
@@ -29,7 +30,7 @@ void Game::resume()
 ////////////////////////////////////////////////////////////
 void Game::start()
 {
-    
+    std::cout << "oui" << std::endl;
 
     ////////////////////////////////////////////////////////////
     // WINDOW CREATION
@@ -62,7 +63,7 @@ void Game::start()
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 
-
+    Textures_manager::addTexture("src/assets/UI/titlescreen.png");
 
     ////////////////////////////////////////////////////////////
     // Game loop
@@ -79,8 +80,11 @@ void Game::start()
         {
 
         }
+
+        std::cout << "oui" << std::endl;
         window.clear();
-        window.draw(*Main_menu::getSprite());
+        window.draw(Main_menu::getAnimation());
+        // window.draw(shape);
         window.display();
 
 
